@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Body({ children }) {
   return (
-    <div className='bg-white max-w-7xl m-auto p-4'>
+    <main id='main' className='bg-white max-w-7xl m-auto p-4'>
       {children}
-    </div>
+    </main>
   )
 }
