@@ -91,6 +91,7 @@ function App() {
       <Footer
         year={new Date().getFullYear()}
         holder='Benjamin Pryor'
+        tabIndex={disableOnPageSwitch}
         links={[
           <NavLink
             key='0'
