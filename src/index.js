@@ -13,13 +13,42 @@ import Body from './components/Body.js';
 import Footer from './components/Footer.js';
 import NavLink from './components/NavLink.js';
 import Card from './components/Card.js';
-import PageContainer from './components/PageContainer';
+
+import PageContainer from './components/page/PageContainer.js';
 
 function App() {
 
   const [page, setPage] = useState('');
 
   const disableOnPageSwitch = (page == '') ? "0" : "-1";
+
+  function getPageBody() {
+    switch (page) {
+      case 'Theoretical Framework':
+        return (
+          <>
+            Theoretical Framework
+          </>
+        );
+
+      case 'Research Process':
+        return (
+          <>
+            Research Process
+          </>
+        );
+
+      case 'Action Plan':
+        return (
+          <>
+            Action Plan
+          </>
+        );
+
+      default:
+        return null;
+    }
+  }
 
   return (
     <>
@@ -45,19 +74,19 @@ function App() {
         </h2>
         <br />
         <br />
-        <p className='text-xl mx-4'>
+        <p className='mx-4'>
           As I was diving into sources on the topic of disability, this is the
           question I began to ask myself. What is modern society getting right?
           What are we getting wrong? How should we improve? What does that look
           like practically?
         </p>
         <br />
-        <p className='text-xl mx-4'>
+        <p className='mx-4'>
           Over the past few weeks, I have been building a research archive of
           several sources that provide some amazing insight into these questions.
         </p>
         <br />
-        <p className='text-xl mx-4'>
+        <p className='mx-4'>
           You can find more information below:
         </p>
         <br />
@@ -83,10 +112,9 @@ function App() {
         </div>
       </Body>
 
-      <PageContainer 
-        page={page}
-        setPage={setPage}
-      />
+      <PageContainer page={page} setPage={setPage}>
+        {getPageBody()}
+      </PageContainer>
       
       <Footer
         year={new Date().getFullYear()}
