@@ -8,16 +8,16 @@ import FrameworkImg from './images/Framework.jpg';
 import ResearchImg from './images/Research.jpg';
 import ActionImg from './images/Action.jpg';
 
-import Header from './components/Header.js';
-import Body from './components/Body.js';
-import Footer from './components/Footer.js';
-import NavLink from './components/NavLink.js';
-import Card from './components/Card.js';
+import Header from './components/Header';
+import Body from './components/Body';
+import Footer from './components/Footer';
+import NavLink from './components/NavLink';
+import Card from './components/Card';
 
-import PageContainer from './components/page/PageContainer.js';
-import TheoreticalFramework from './components/pages/TheoreticalFramework.js';
-import ResearchProcess from './components/pages/ResearchProcess.js';
-import ActionPlan from './components/pages/ActionPlan.js';
+import PageContainer from './components/page/PageContainer';
+import TheoreticalFramework from './components/pages/TheoreticalFramework';
+import ResearchProcess from './components/pages/ResearchProcess';
+import ActionPlan from './components/pages/ActionPlan';
 
 function App() {
 
@@ -43,28 +43,23 @@ function App() {
 
       <Body>
         <br />
-        <h2 className='text-5xl mx-56 text-center portrait:mx-8 leading-tight'>
-          &ldquo;How can we help create a society that allows disabled people not only
-          to <b>participate</b> but to <b>flourish</b>?&rdquo;
+        <h2 className='text-5xl mx-56 mb-12 text-center leading-tight portrait:mx-8'>
+          &ldquo;How can we help create a society that allows disabled people
+          not only to <b>participate</b> but to <b>flourish</b>?&rdquo;
         </h2>
-        <br />
-        <br />
-        <p className='mx-4'>
+        <p className='mx-4 mb-6'>
           As I was diving into sources on the topic of disability, this is the
           question I began to ask myself. What is modern society getting right?
           What are we getting wrong? How should we improve? What does that look
           like practically?
         </p>
-        <br />
-        <p className='mx-4'>
+        <p className='mx-4 mb-6'>
           Over the past few weeks, I have been building a research archive of
           several sources that provide some amazing insight into these questions.
         </p>
-        <br />
-        <p className='mx-4'>
+        <p className='mx-4 mb-6'>
           You can find more information below:
         </p>
-        <br />
         <div className='text-center'>
           <Card
             title='Theoretical Framework'
@@ -87,7 +82,10 @@ function App() {
         </div>
       </Body>
 
-      <PageContainer page={page} setPage={setPage}>
+      <PageContainer
+        page={page}
+        setPage={setPage}
+      >
         <TheoreticalFramework page={page} />
         <ResearchProcess page={page} />
         <ActionPlan page={page} />
@@ -115,7 +113,6 @@ function App() {
         <p>Made with</p>
         <NavLink
           className='-translate-x-3 underline after:hidden'
-          key='1'
           text='ReactJS'
           tabIndex={disableOnPageSwitch}
           href='//react.dev/'
@@ -123,7 +120,6 @@ function App() {
         <p className='-translate-x-2'>and</p>
         <NavLink
           className='-translate-x-5 underline after:hidden'
-          key='1'
           text='TailwindCSS'
           tabIndex={disableOnPageSwitch}
           href='//tailwindcss.com/'
