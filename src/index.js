@@ -15,40 +15,15 @@ import NavLink from './components/NavLink.js';
 import Card from './components/Card.js';
 
 import PageContainer from './components/page/PageContainer.js';
+import TheoreticalFramework from './components/pages/TheoreticalFramework.js';
+import ResearchProcess from './components/pages/ResearchProcess.js';
+import ActionPlan from './components/pages/ActionPlan.js';
 
 function App() {
 
   const [page, setPage] = useState('');
 
   const disableOnPageSwitch = (page == '') ? "0" : "-1";
-
-  function getPageBody() {
-    switch (page) {
-      case 'Theoretical Framework':
-        return (
-          <>
-            Theoretical Framework
-          </>
-        );
-
-      case 'Research Process':
-        return (
-          <>
-            Research Process
-          </>
-        );
-
-      case 'Action Plan':
-        return (
-          <>
-            Action Plan
-          </>
-        );
-
-      default:
-        return null;
-    }
-  }
 
   return (
     <>
@@ -113,7 +88,9 @@ function App() {
       </Body>
 
       <PageContainer page={page} setPage={setPage}>
-        {getPageBody()}
+        <TheoreticalFramework page={page} />
+        <ResearchProcess page={page} />
+        <ActionPlan page={page} />
       </PageContainer>
       
       <Footer
@@ -123,6 +100,12 @@ function App() {
         links={[
           <NavLink
             key='0'
+            text='View Source'
+            tabIndex={disableOnPageSwitch}
+            href='https://github.com/programmer2514/AAA211-Multimodal-Narrative/'
+          />,
+          <NavLink
+            key='1'
             text='My Projects'
             tabIndex={disableOnPageSwitch}
             href='//programmer2514.github.io/'
@@ -131,7 +114,7 @@ function App() {
       >
         <p>Made with</p>
         <NavLink
-          className='-translate-x-3 underline'
+          className='-translate-x-3 underline after:hidden'
           key='1'
           text='ReactJS'
           tabIndex={disableOnPageSwitch}
@@ -139,7 +122,7 @@ function App() {
         />
         <p className='-translate-x-2'>and</p>
         <NavLink
-          className='-translate-x-5 underline'
+          className='-translate-x-5 underline after:hidden'
           key='1'
           text='TailwindCSS'
           tabIndex={disableOnPageSwitch}

@@ -35,7 +35,7 @@ export default function PageContainer({ page, setPage, children }) {
     }
   }
 
-  if (page == '') return (<></>)
+  if (page == '') return (<></>);
 
   return (
     <>
