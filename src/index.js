@@ -97,7 +97,7 @@ function App() {
             key='0'
             text='View Source'
             tabIndex={disableOnPageSwitch}
-            href='https://github.com/programmer2514/AAA211-Multimodal-Narrative/'
+            href='https://github.com/programmer2514/AAA211-Multimodal-Narrative/tree/main/src'
           />,
           <NavLink
             key='1'
