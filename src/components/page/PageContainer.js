@@ -47,24 +47,24 @@ export default function PageContainer({ page, setPage, children }) {
       ></a>
       <a
         href='#'
-        className='fixed top-1/2 left-0 translate-x-[calc(50vw-43rem-50%)] -translate-y-1/2 -rotate-90 text-white text-6xl z-50 [@media(max-width:88rem)]:hidden'
+        className='fixed top-1/2 left-0 translate-x-[calc(50vw-42rem-50%)] -translate-y-1/2 scale-y-150 text-white text-5xl z-50 [@media(max-width:87rem)]:hidden'
         role='button'
         aria-label='Previous page'
         onClick={() => { setPage(getPrev()) }}
       >
-        &#x2BB9;
+        &lt;
       </a>
       <PageBody setPage={setPage} title={page}>
         {children}
       </PageBody>
       <a
         href='#'
-        className='fixed top-1/2 right-0 translate-x-[calc(50%-50vw+43rem)] -translate-y-1/2 rotate-90 text-white text-6xl z-50 [@media(max-width:88rem)]:hidden'
+        className='fixed top-1/2 right-0 translate-x-[calc(50%-50vw+42rem)] -translate-y-1/2 scale-y-150 text-white text-5xl z-50 [@media(max-width:87rem)]:hidden'
         role='button'
         aria-label='Next page'
         onClick={() => { setPage(getNext()) }}
       >
-        &#x2BB9;
+        &gt;
       </a>
     </>
   )
