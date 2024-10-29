@@ -17,9 +17,6 @@ export default function TheoreticalFramework({ page }) {
       ways in which the theory of inclusivity collides with practice; in other
       words, what would a truly inclusive society look like?
       </p>
-      <h2 className='text-3xl font-bold mb-4 text-center'>
-        Two Models of Disability
-      </h2>
       <h3 className='text-2xl font-bold mb-2'>
         The Medical Model
       </h3>
