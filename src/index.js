@@ -82,10 +82,7 @@ function App() {
         </div>
       </Body>
 
-      <PageContainer
-        page={page}
-        setPage={setPage}
-      >
+      <PageContainer page={page} setPage={setPage}>
         <TheoreticalFramework page={page} />
         <ResearchProcess page={page} />
         <ActionPlan page={page} />

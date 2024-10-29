@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Card({ title, image, tabIndex, onClick }) {
   return (
-    <div className='inline-block w-96 h-64 m-4 drop-shadow-md hover:drop-shadow-sm hover:translate-y-0.5 active:drop-shadow-none active:translate-y-1 portrait:w-72 portrait:h-48'>
+    <div className='inline-block w-96 h-64 m-4 drop-shadow-md overflow-visible hover:drop-shadow-sm hover:translate-y-0.5 active:drop-shadow-none active:translate-y-1 portrait:w-72 portrait:h-48'>
       <a
         role='button'
         href='#page'

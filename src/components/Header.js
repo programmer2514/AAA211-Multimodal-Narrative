@@ -26,11 +26,11 @@ export default function Header({ image, title, tabIndex, links }) {
               role='none'
               src={image}
             />
-            <h1 className='font-bold text-3xl pl-3'>
+            <h1 className='font-bold text-3xl ml-3'>
               {title}
             </h1>
           </a>
-          <span className='grow portrait:pt-2' role='none' />
+          <span className='grow portrait:mt-2' role='none' />
             {links}
         </div>
       </div>
