@@ -26,7 +26,7 @@ export default function Header({ image, title, tabIndex, links }) {
               role='none'
               src={image}
             />
-            <h1 className='font-bold text-3xl ml-3 portrait:text-center portrait:ml-0'>
+            <h1 className='font-bold text-3xl ml-3 portrait:text-center portrait:ml-0 portrait:mt-2'>
               {title}
             </h1>
           </a>

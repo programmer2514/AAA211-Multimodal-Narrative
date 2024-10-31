@@ -109,14 +109,14 @@ function App() {
       >
         <p>Made with</p>
         <NavLink
-          className='!mx-1 underline after:hidden portrait:mt-0'
+          className='!mx-1 underline after:hidden portrait:!mt-0'
           text='ReactJS'
           tabIndex={disableOnPageSwitch}
           href='//react.dev/'
         />
         <p>and</p>
         <NavLink
-          className='!ml-1 underline after:hidden portrait:mt-0'
+          className='!ml-1 underline after:hidden portrait:!mt-0'
           text='TailwindCSS'
           tabIndex={disableOnPageSwitch}
           href='//tailwindcss.com/'
