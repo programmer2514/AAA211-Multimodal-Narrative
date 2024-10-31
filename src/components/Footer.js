@@ -16,11 +16,13 @@ export default function Footer({ year, holder, tabIndex, links, children }) {
           Copyright &copy; {year} {holder}
         </p>
         <span className='grow' role='none' />
-        <div className='flex text-gray-400'>
+        <div className='flex text-gray-400 portrait:mt-4'>
           {children}
         </div>
         <span className='grow' role='none' />
-        {links}
+        <div className='flex'>
+          {links}
+        </div>
       </div>
     </div>
   )

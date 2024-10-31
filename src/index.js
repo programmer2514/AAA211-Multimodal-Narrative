@@ -60,7 +60,7 @@ function App() {
         <p className='mx-4 mb-6'>
           You can find more information below:
         </p>
-        <div className='text-center'>
+        <div id='cards' className='text-center'>
           <Card
             title='Theoretical Framework'
             image={FrameworkImg}
@@ -109,14 +109,14 @@ function App() {
       >
         <p>Made with</p>
         <NavLink
-          className='-translate-x-3 underline after:hidden'
+          className='!mx-1 underline after:hidden portrait:mt-0'
           text='ReactJS'
           tabIndex={disableOnPageSwitch}
           href='//react.dev/'
         />
-        <p className='-translate-x-2'>and</p>
+        <p>and</p>
         <NavLink
-          className='-translate-x-5 underline after:hidden'
+          className='!ml-1 underline after:hidden portrait:mt-0'
           text='TailwindCSS'
           tabIndex={disableOnPageSwitch}
           href='//tailwindcss.com/'

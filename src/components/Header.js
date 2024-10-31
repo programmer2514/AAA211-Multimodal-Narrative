@@ -15,7 +15,7 @@ export default function Header({ image, title, tabIndex, links }) {
         <div className='flex items-center max-w-7xl m-auto px-8 py-4 portrait:flex-col'>
           <a
             id='head'
-            className='flex items-center'
+            className='flex items-center portrait:flex-col'
             role='button'
             tabIndex={tabIndex}
             href='#'
@@ -26,11 +26,11 @@ export default function Header({ image, title, tabIndex, links }) {
               role='none'
               src={image}
             />
-            <h1 className='font-bold text-3xl ml-3'>
+            <h1 className='font-bold text-3xl ml-3 portrait:text-center portrait:ml-0'>
               {title}
             </h1>
           </a>
-          <span className='grow portrait:mt-2' role='none' />
+          <span className='grow' role='none' />
             {links}
         </div>
       </div>
